@@ -68,7 +68,6 @@ const cats = [
         age: 21
     }
 ];
-
 // REMOVE THIS !!!!
 
 function catName(catArray) {
@@ -87,9 +86,17 @@ The function should return the following:
 <h5>Blob</h5>
 <h5>Harold</h5>
 <h5>Blurt</h5>
-/*
+*/
 
+function catName(catArray) {
+    let catNameHTML = "";
 
+    for (let i = 0; i < catArray.length; i++) {
+        catNameHTML += `<h5>${catArray[i].name}</h5>`;
+    }
+
+    return catNameHTML;
+}
 
 /*
 Question 9
