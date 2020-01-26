@@ -16,9 +16,14 @@ Select the h3 from the HTML below using the querySelector method and assign it t
 <h3>Subheading</h3>
 */
 
+const heading = document.querySelector("h3");
+console.dir(heading);
+
 /* Question 3
 Use the style property on the heading variable from the question above to change its font size to "2em".
 */
+
+heading.style.fontSize = "2em";
 
 /* Question 4
 Add a class to the heading variable called subheading.
