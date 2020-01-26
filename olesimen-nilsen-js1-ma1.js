@@ -70,13 +70,13 @@ const cats = [
 ];
 // REMOVE THIS !!!!
 
-function catName(catArray) {
+function catScan(catArray) {
     for (let i = 0; i < catArray.length; i++) {
         console.log(catArray[i].name);
     }
 }
 
-catName(cats);
+catScan(cats);
 
 /* Question 8
 Using the function and cats variable from the above question, instead of logging the name property, wrap each name property in an h5 tag, add it to a variable you declare before the loop and return the variable from the function after the loop.
@@ -88,14 +88,14 @@ The function should return the following:
 <h5>Blurt</h5>
 */
 
-function catName(catArray) {
-    let catNameHTML = "";
+function catScan(catArray) {
+    let catName = "";
 
     for (let i = 0; i < catArray.length; i++) {
-        catNameHTML += `<h5>${catArray[i].name}</h5>`;
+        catName += `<h5>${catArray[i].name}</h5>`;
     }
 
-    return catNameHTML;
+    return catName;
 }
 
 /*
@@ -103,7 +103,7 @@ Question 9
 Call the function from question 8, pass it the cats variable from question 7 and set the inner HTML of the resultsContainer variable from question 6 to the return value of the function.
 */
 
-resultsContainer.innerHTML = catName(cats);
+resultsContainer.innerHTML = catScan(cats);
 
 /* Question 10
 Using the function from question 8, add a p element containing the age property from each object. If the age property is missing, it should display Age unknown instead.
