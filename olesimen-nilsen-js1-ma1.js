@@ -54,7 +54,6 @@ Inside the function, loop through the catArray argument and console log the name
 Call the function and pass in the cats variable below.
 */
 
-// REMOVE THIS!!!!
 const cats = [
     {
         name: "Blob",
@@ -68,7 +67,6 @@ const cats = [
         age: 21
     }
 ];
-// REMOVE THIS !!!!
 
 function catScan(catArray) {
     for (let i = 0; i < catArray.length; i++) {
@@ -125,3 +123,22 @@ The function should return the following:
     <p>21</p>
 </div>
 */
+
+function catScan(catArray) {
+    let catHTML = "";
+
+    for (let i = 0; i < catArray.length; i++) {
+        let catAge = "Age unknown";
+
+        if (catArray[i].age) {
+            catAge = catArray[i].age;
+        }
+
+        catHTML += `<div>
+                    <h5>${catArray[i].name}</h5>
+                    <p>${catAge}</p>
+                    </div>`;
+    }
+
+    return catHTML;
+}
