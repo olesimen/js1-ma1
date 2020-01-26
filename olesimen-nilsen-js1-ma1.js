@@ -95,6 +95,8 @@ function catName(catArray) {
         catNameHTML += `<h5>${catArray[i].name}</h5>`;
     }
 
+    console.log(catNameHTML);
+
     return catNameHTML;
 }
 
@@ -102,6 +104,9 @@ function catName(catArray) {
 Question 9
 Call the function from question 8, pass it the cats variable from question 7 and set the inner HTML of the resultsContainer variable from question 6 to the return value of the function.
 */
+
+catName(cats);
+resultsContainer.innerHTML = catNameHTML;
 
 /* Question 10
 Using the function from question 8, add a p element containing the age property from each object. If the age property is missing, it should display Age unknown instead.
